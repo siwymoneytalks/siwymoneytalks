@@ -1,0 +1,84 @@
+export default function PassiveIncomeSite() {
+  const tools = [
+    {
+      name: "ChatGPT",
+      desc: "Asystent AI do pracy, nauki i tworzenia treści.",
+      link: "https://openai.com/chatgpt",
+    },
+    {
+      name: "Canva",
+      desc: "Projektowanie grafik i social media.",
+      link: "https://www.canva.com/",
+    },
+    {
+      name: "Notion",
+      desc: "Organizacja pracy i notatek.",
+      link: "https://www.notion.so/",
+    },
+    {
+      name: "Shopify",
+      desc: "Tworzenie sklepu internetowego.",
+      link: "https://www.shopify.com/",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-zinc-950 text-white p-8">
+      <header className="max-w-6xl mx-auto mb-12">
+        <h1 className="text-5xl font-bold mb-4">
+          AI Tools Hub
+        </h1>
+        <p className="text-zinc-400 text-lg max-w-2xl">
+          Strona katalogowa AI zarabiająca na afiliacji, reklamach i sponsorowanych wpisach.
+        </p>
+      </header>
+
+      <main className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {tools.map((tool) => (
+          <div
+            key={tool.name}
+            className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 shadow-xl hover:scale-[1.02] transition"
+          >
+            <h2 className="text-2xl font-semibold mb-3">{tool.name}</h2>
+            <p className="text-zinc-400 mb-6">{tool.desc}</p>
+
+            <a
+              href={tool.link}
+              target="_blank"
+              className="inline-block bg-white text-black px-5 py-3 rounded-2xl font-medium"
+            >
+              Sprawdź
+            </a>
+          </div>
+        ))}
+      </main>
+
+      <section className="max-w-6xl mx-auto mt-20 grid md:grid-cols-3 gap-6">
+        <div className="bg-zinc-900 p-6 rounded-3xl border border-zinc-800">
+          <h3 className="text-xl font-semibold mb-2">Monetyzacja</h3>
+          <p className="text-zinc-400">
+            Dodaj linki afiliacyjne, Google AdSense i sponsorowane wpisy.
+          </p>
+        </div>
+
+        <div className="bg-zinc-900 p-6 rounded-3xl border border-zinc-800">
+          <h3 className="text-xl font-semibold mb-2">SEO</h3>
+          <p className="text-zinc-400">
+            Publikuj rankingi AI i poradniki pod wyszukiwarki.
+          </p>
+        </div>
+
+        <div className="bg-zinc-900 p-6 rounded-3xl border border-zinc-800">
+          <h3 className="text-xl font-semibold mb-2">Automatyzacja</h3>
+          <p className="text-zinc-400">
+            Możesz generować nowe wpisy automatycznie przez API AI.
+          </p>
+        </div>
+      </section>
+
+      <footer className="max-w-6xl mx-auto mt-20 border-t border-zinc-800 pt-8 text-zinc-500 text-sm">
+        © 2026 AI Tools Hub
+      </footer>
+    </div>
+  );
+}
